@@ -12,6 +12,7 @@ namespace matymare\gamemodes;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
+use pocketmine\Player;
 
 class Main extends PluginBase{
 
