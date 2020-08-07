@@ -46,6 +46,6 @@ class Main extends PluginBase{
 				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to adventure!");
 		
 		    return true;
-	}
+	           }
 		}
 }
