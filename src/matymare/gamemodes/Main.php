@@ -16,31 +16,34 @@ use pocketmine\command\Command;
 class Main extends PluginBase{
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
-		switch($command->getName()){
-		    if(!$sender instanceof Player){
-		       case "gm":
-		               $sender->sendMessage("§8[§eGAMEMODES§8] §cTry commands: /gms, /gmc, /gmsp, /gma");
-		               break;
-			   case "gms":
-                       $sender->setGamemode(0);
-				       $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to survival!");
-			           break;
-		       case "gmc":
-			           $sender->setGamemode(1);
-			           $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to creative!");
-				       break;
-		       case "gmsp":
-		               $sender->setGamemode(3);
-				       $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to spectator!");
-				       break;
-		       case "gma":
-		               $sender->setGamemode(2);
-				       $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to adventure!");
-				       break;
-		               }
-			    return true;
-	    default:
-	            return false;
-		}
+		    if($command->getName() == "gm") {
+			        $sender->sendMessage("§8[§eGAMEMODES§8] §cTry commands: /gms, /gmc, /gmsp, /gma");
+		
+		    return true;
+	}
+	        if($command->getName() == "gms") {
+			        $sender->setGamemode(0);
+				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to survival!");
+		
+		    return true;
+	}
+	        if($command->getName() == "gmc") {
+			        $sender->setGamemode(1);
+				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to creative!");
+		
+		    return true;
+	}
+	        if($command->getName() == "gmsp") {
+			        $sender->setGamemode(3);
+				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to spectate!");
+		
+		    return true;
+	}
+	        if($command->getName() == "gma") {
+			        $sender->setGamemode(2);
+				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to adventure!");
+		
+		    return true;
+	}
 		}
 }
