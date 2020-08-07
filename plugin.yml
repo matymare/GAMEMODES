@@ -1,0 +1,29 @@
+name: GAMEMODES
+main: matymare\Gamemodes\Main
+api: 3.0.0
+version: 1.0
+author: matymare
+description: Commands /gms, /gma, /gmc and /gmsp.
+
+commands:
+    gm:
+      description: Main GAMEMODES command!
+      aliases: [gamemodes]
+      permission: gamemodes.main
+    gms:
+      description: Set your gamemode to survival
+      aliases: [gm0]
+      permission: gamemodes.gms
+    gmc:
+      description: Set your gamemode to creative
+      aliases: [gm1]
+      permission: gamemodes.gmc
+    gmsp:
+      description: Set your gamemode to spectate
+      aliases: [gm3]
+      permission: gamemodes.gmsp
+    gma:
+      description: Set your gamemode to adventure
+      aliases: [gm2]
+      permission: gamemodes.gma
+     
