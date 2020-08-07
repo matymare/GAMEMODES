@@ -17,6 +17,7 @@ class Main extends PluginBase{
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 		switch($command->getName()){
+		    if(!$sender instanceof Player){
 		       case "gm":
 		               $sender->sendMessage("§8[§eGAMEMODES§8] §cTry commands: /gms, /gmc, /gmsp, /gma");
 		               break;
@@ -36,6 +37,7 @@ class Main extends PluginBase{
 		               $sender->setGamemode(2);
 				       $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to adventure!");
 				       break;
+		               }
 			    return true;
 	    default:
 	            return false;
