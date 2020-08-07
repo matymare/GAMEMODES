@@ -7,7 +7,7 @@
      * You can write to me on Discord: Roospy#1666
      */
      
-namespace matymare\Gamemodes;
+namespace matymare\gamemodes;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
