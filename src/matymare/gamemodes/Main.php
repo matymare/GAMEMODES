@@ -16,7 +16,7 @@ use pocketmine\Player;
 
 class Main extends PluginBase{
 
-	public function onCommand(CommandSender $sender, Command $command, string $label, array $args){
+	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
 	    $player = $this->getServer()->getPlayer($sender->getName());
 		    if($command->getName() == "gm") {
 			        $sender->sendMessage("§8[§eGAMEMODES§8] §cTry commands: /gms, /gmc, /gmsp, /gma");
@@ -47,5 +47,6 @@ class Main extends PluginBase{
 		
 		    return true;
 	           }
+	   return true;
 		}
 }
