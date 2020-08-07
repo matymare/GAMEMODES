@@ -17,31 +17,32 @@ use pocketmine\Player;
 class Main extends PluginBase{
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+	    $player = $this->getServer()->getPlayer($sender->getName());
 		    if($command->getName() == "gm") {
 			        $sender->sendMessage("§8[§eGAMEMODES§8] §cTry commands: /gms, /gmc, /gmsp, /gma");
 		
 		    return true;
 	}
 	        if($command->getName() == "gms") {
-			        $sender->setGamemode(0);
+			        $player->setGamemode(0);
 				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to survival!");
 		
 		    return true;
 	}
 	        if($command->getName() == "gmc") {
-			        $sender->setGamemode(1);
+			        $player->setGamemode(1);
 				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to creative!");
 		
 		    return true;
 	}
 	        if($command->getName() == "gmsp") {
-			        $sender->setGamemode(3);
+			        $player->setGamemode(3);
 				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to spectate!");
 		
 		    return true;
 	}
 	        if($command->getName() == "gma") {
-			        $sender->setGamemode(2);
+			        $player->setGamemode(2);
 				    $sender->sendMessage("§8[§eGAMEMODES§8] §aYour game mode has been set to adventure!");
 		
 		    return true;
